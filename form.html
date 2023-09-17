@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f2faff9cdd.js" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="styles/styles.css"> 
+    <title>Trabaja con nosotros</title>
+</head>
+<body>
+    <header class="header">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#"> Ofertas </a></li>
+                <li><a href="#"> Destacados </a></li>
+                <li><a href="#"> Favoritos </a></li>
+                <li><a href="form.html"> Trabaja con nosotros </a></li>
+            </ul>
+        </nav>
+        <svg
+        class="menu-icon"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.714286 5.15625H19.2857C19.6802 5.15625 20 4.87645 20 4.53125V2.96875C20 2.62355 19.6802 2.34375 19.2857 2.34375H0.714286C0.319777 2.34375 0 2.62355 0 2.96875V4.53125C0 4.87645 0.319777 5.15625 0.714286 5.15625ZM0.714286 11.4062H19.2857C19.6802 11.4062 20 11.1264 20 10.7812V9.21875C20 8.87355 19.6802 8.59375 19.2857 8.59375H0.714286C0.319777 8.59375 0 8.87355 0 9.21875V10.7812C0 11.1264 0.319777 11.4062 0.714286 11.4062ZM0.714286 17.6562H19.2857C19.6802 17.6562 20 17.3764 20 17.0312V15.4688C20 15.1236 19.6802 14.8438 19.2857 14.8438H0.714286C0.319777 14.8438 0 15.1236 0 15.4688V17.0312C0 17.3764 0.319777 17.6562 0.714286 17.6562Z"
+          fill="white"
+        />
+      </svg>
+      <svg class="close" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path  fill="white"  d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+        <form action="" class="search-form">
+            <input type="search" name="search" id="search" placeholder="Buscar...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </header>
+    <main>
+        <section>
+            <div class="main-form">
+                <h1>Trabaja con nosotros
+                </h1>
+                <h2>Gracias por el interes en nuestra empresa</h2>
+                <p>Completa el siguiente formulario de postulacion</p>
+            </div>
+            <div>
+                <form id="form" action="mailto:dfpipke22@ucema.edu.ar" class="application-form">
+                    <fieldset>
+                        <legend>Informacion personal</legend>
+                        <div  class="form-group">
+                            <label for="fullname">Nombre y apellido</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Juan Perez" required>
+                        </div>
+                        <div  class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div  class="form-group">
+                            <label for="dni">DNI/Pasaporte</label>
+                            <input type="text" id="dni" name="dni">
+                        </div>
+                        <div  class="form-group">
+                            <label for="position">Puesto de interes</label>
+                            <select name="position" id="position" multiple>
+                                <option value="" selected> Seleccione una opcion</option>
+                                <option value="mkt"> Analista de marketing</option>
+                                <option value="fin" >Jefe de finanzas</option>
+                                <option value="rep">Repartidor</option>
+                                <option value="rrhh">Director de RRHH</option>
+                            </select>
+                        </div>
+                        <div  class="form-group">
+                            <label for="cv">Subi tu cv</label>
+                            <input type="file" name="cv" id="cv">
+                        </div>
+                        <div  class="form-group">
+                            <label for="age">Edad</label>
+                            <input type="number" name="age" id="age" min="18" max="80" step="0.5">
+                        </div>
+                        <div  class="form-group">
+                            <p>Idiomas</p>
+                            <div class="languages-div">
+                                <div>
+                                    <input type="checkbox" id="language-spanish" value="spanish" name="language">
+                                    <label for="language-spanish">Español</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="language-english" value="english" name="language">
+                                    <label for="language-english">Ingles</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="language-french" value="fren ch" name="language">
+                                    <label for="language-french">Frances</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="language-german" value="german" name="language">
+                                    <label for="language-german">Aleman</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="form-group">
+                            <label for="telephone">Telefono</label>
+                            <input type="tel" name="telephone" id="telephone" maxlength="12">
+                        </div>
+                        <div  class="form-group">
+                            <label for="linkedin">Linkedin</label>
+                            <input type="text" id="linkedin" name="linkedin">
+                        </div>
+                        <div  class="form-group">
+                            <label for="cover-letter">Carta de presentacion</label>
+                            <textarea name="cover-letter" id="cover-letter" cols="30" rows="10" maxlength="5000" placeholder="Contanos por que queres trabajasr con nosotros"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset >
+                        <legend>Preferencias de trabajo</legend>
+                        <div class="working-preferences-div">
+                            <div  class="form-group">
+                                <p>Disponibilidad  horaria</p>
+                                <div>
+                                    <input type="radio" name="working-preferences" id="morning" value="morning">
+                                    <label for="morning">Mañana</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="working-preferences" id="evening" value="evening">
+                                    <label for="evening">Tarde</label>
+                                </div>
+                            </div>
+                            <div  class="form-group">
+                                <p>Forma de trabajo</p>
+                                <div>
+                                    <input type="radio" name="working-place" id="remote">
+                                    <label for="remote">Virtual</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="working-place" id="face-to-face">
+                                    <label for="face-to-face">Presencial</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="form-group">
+                            <label for="start-date">Comienzo</label>
+                            <input type="datetime-local" name="start-date" id="start-date">
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Enviar</button>
+                        <button type="reset" class="btn">Reset</button>
+                        <!-- <input type="submit" value="Subir" class="btn"> -->
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav>
+            <ul class="ul-footer">
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+</html>
