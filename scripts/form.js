@@ -13,7 +13,11 @@ form.addEventListener('submit', function(event){
     const telephone = document.getElementById('telephone').value;
     const linkedin = document.getElementById('linkedin').value;
     const coverLetter = document.getElementById('cover-letter').value;
-
+    
+    if(isNaN(age)){
+        alert("La edad debe ser un numero")
+        return
+    }
     // Idiomas seleccionados
     const selectedLanguages = [];
     document.querySelectorAll('input[name="language"]:checked').forEach(function(checkbox) {
@@ -21,8 +25,21 @@ form.addEventListener('submit', function(event){
     });
 
     // Preferencias de trabajo
-    const selectedWorkingPreference = document.querySelector('input[name="working-preferences"]:checked').value; 
-    const selectedWorkingPlace = document.querySelector('input[name="working-place"]:checked').value;
+    let workingPreference
+    if(document.querySelector('input[name="working-preferences"]:checked') == null){
+        workingPreference = "NS/NC"
+    }else{
+        workingPreference = document.querySelector('input[name="working-preferences"]:checked').value
+    }
+
+    let selectedWorkingPlace
+    if(document.querySelector('input[name="working-place"]:checked') == null){
+        selectedWorkingPlace = "No seleccionado"
+    }else{
+        selectedWorkingPlace = document.querySelector('input[name="working-place"]:checked').value
+    }
+    //const selectedWorkingPreference = document.querySelector('input[name="working-preferences"]:checked').value; 
+   // const selectedWorkingPlace = document.querySelector('input[name="working-place"]:checked').value;
     const startDate = document.getElementById('start-date').value;
 
 
@@ -37,7 +54,24 @@ form.addEventListener('submit', function(event){
     console.log("LinkedIn:", linkedin);
     console.log("Carta de presentación:", coverLetter);
     console.log("Idiomas seleccionados:", selectedLanguages);
-    console.log("Disponibilidad horaria:", selectedWorkingPreference);
+    console.log("Disponibilidad horaria:", workingPreference);
     console.log("Forma de trabajo:", selectedWorkingPlace);
     console.log("Fecha de comienzo:", startDate);
+
+    const candidato = {
+        name: fullname,
+        email: email,
+        passport: dni,
+        position: position,
+        cv: cv,
+        age: age,
+        telephone: telephone,
+        socialMedia: linkedin,
+        presentation: coverLetter,
+        languages: selectedLanguages,
+        workingPreference: workingPreference,
+        workingPlace: selectedWorkingPlace,
+        startDate: startDate
+    }
+    console.log("candidato ", candidato)
 });
