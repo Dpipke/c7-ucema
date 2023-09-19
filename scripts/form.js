@@ -4,18 +4,37 @@ form.addEventListener('submit', function(event){
     event.preventDefault();  // Evita el envío del formulario para procesar los datos en JavaScript
 
     // Datos personales
-    const fullname = document.getElementById('fullname').value;
-    const email = document.getElementById('email').value;
-    const dni = document.getElementById('dni').value;
+    const fullname = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const dni = document.getElementById('dni').value.trim();
     const position = document.getElementById('position').value;
     const cv = document.getElementById('cv').files[0]; // Esta es una referencia al archivo. Para obtener el nombre, usar cv.name
-    const age = document.getElementById('age').value;
-    const telephone = document.getElementById('telephone').value;
-    const linkedin = document.getElementById('linkedin').value;
-    const coverLetter = document.getElementById('cover-letter').value;
+    const age = document.getElementById('age').value.trim();
+    const telephone = document.getElementById('telephone').value.trim();
+    const linkedin = document.getElementById('linkedin').value.trim();
+    const coverLetter = document.getElementById('cover-letter').value.trim();
     
     if(isNaN(age)){
         alert("La edad debe ser un numero")
+        return
+    }
+    //console.log("cover letter ", coverLetter)
+    if(coverLetter == ""){
+        alert("Contanos sobre vos")
+        return
+    }
+    if(fullname == ""){
+        alert("Ingresa tu nombre")
+        return
+    }else{
+        alert("muy bien")
+    }
+    if(!fullname.includes(" ")){
+        alert("Ingresa tu nombre y apellido")
+        return
+    }
+    if(!email.includes("@")){
+        alert("Ingresa un mail valido")
         return
     }
     // Idiomas seleccionados
