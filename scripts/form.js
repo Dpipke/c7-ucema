@@ -63,19 +63,19 @@ form.addEventListener('submit', function(event){
 
 
     // Mostrar resultados en la consola 
-    console.log("Nombre y Apellido:", fullname);
-    console.log("Email:", email);
-    console.log("DNI/Pasaporte:", dni);
-    console.log("Puesto de interés:", position);
-    console.log("Archivo CV:", cv ? cv.name : 'Ninguno seleccionado');
-    console.log("Edad:", age);
-    console.log("Teléfono:", telephone);
-    console.log("LinkedIn:", linkedin);
-    console.log("Carta de presentación:", coverLetter);
-    console.log("Idiomas seleccionados:", selectedLanguages);
-    console.log("Disponibilidad horaria:", workingPreference);
-    console.log("Forma de trabajo:", selectedWorkingPlace);
-    console.log("Fecha de comienzo:", startDate);
+    // console.log("Nombre y Apellido:", fullname);
+    // console.log("Email:", email);
+    // console.log("DNI/Pasaporte:", dni);
+    // console.log("Puesto de interés:", position);
+    // console.log("Archivo CV:", cv ? cv.name : 'Ninguno seleccionado');
+    // console.log("Edad:", age);
+    // console.log("Teléfono:", telephone);
+    // console.log("LinkedIn:", linkedin);
+    // console.log("Carta de presentación:", coverLetter);
+    // console.log("Idiomas seleccionados:", selectedLanguages);
+    // console.log("Disponibilidad horaria:", workingPreference);
+    // console.log("Forma de trabajo:", selectedWorkingPlace);
+    // console.log("Fecha de comienzo:", startDate);
 
     const candidato = {
         name: fullname,
@@ -92,5 +92,11 @@ form.addEventListener('submit', function(event){
         workingPlace: selectedWorkingPlace,
         startDate: startDate
     }
-    console.log("candidato ", candidato)
+    console.log("candidato antes de guartdar en local storage", candidato)
+    localStorage.setItem("candidato", JSON.stringify(candidato))
 });
+
+function getCandidato(){
+    const candidatoLocalStorage = JSON.parse(localStorage.getItem("candidato"))
+    console.log("candidato recuperado del localstorage", candidatoLocalStorage)
+}
